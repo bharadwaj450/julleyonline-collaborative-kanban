@@ -1,0 +1,348 @@
+
+/* ======================================
+   TENANTS PAGE
+====================================== */
+
+.tenants-page {
+  min-height: 100vh;
+  padding: 36px clamp(20px, 4vw, 64px) 64px;
+  background: #f8fafc;
+  color: #0f172a;
+  box-sizing: border-box;
+}
+
+/* Page header */
+
+.tenants-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.tenants-header-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.tenants-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.tenants-header h1 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.tenants-header-content > p {
+  max-width: 620px;
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.tenants-back-button {
+  margin-top: 20px;
+  padding: 11px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tenants-back-button:hover {
+  background: #f1f5f9;
+}
+
+/* Section heading */
+
+.tenants-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.tenants-section-heading h2 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.tenants-section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.tenants-count {
+  padding: 8px 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Workspace grid */
+
+.tenants-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, 320px), 1fr)
+  );
+  gap: 20px;
+}
+
+/* Workspace card */
+
+.tenants-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 255px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tenants-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+}
+
+.tenants-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tenants-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.tenants-card-label {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.tenants-card-body {
+  flex: 1;
+}
+
+.tenants-card-body h3 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tenants-card-body p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Card footer */
+
+.tenants-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+  margin-top: 24px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.tenants-active-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tenants-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.tenants-select-button {
+  padding: 11px 15px;
+  border: 1px solid #4f46e5;
+  border-radius: 9px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.tenants-select-button:hover {
+  background: #4338ca;
+}
+
+/* Loading state */
+
+.tenants-loading {
+  padding: 50px 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.tenants-loading-icon {
+  margin-bottom: 10px;
+  color: #6366f1;
+  font-size: 36px;
+}
+
+.tenants-loading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Empty state */
+
+.tenants-empty {
+  padding: 60px 24px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.tenants-empty-icon {
+  margin-bottom: 15px;
+  color: #6366f1;
+  font-size: 38px;
+}
+
+.tenants-empty h3 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.tenants-empty p {
+  max-width: 450px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Error */
+
+.tenants-error {
+  padding: 14px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .tenants-page {
+    padding: 24px 16px 48px;
+  }
+
+  .tenants-header {
+    margin-bottom: 32px;
+  }
+
+  .tenants-back-button {
+    margin-top: 0;
+  }
+
+  .tenants-card {
+    padding: 20px;
+  }
+}
+/* ======================================
+   TENANTS HEADER ACTIONS
+====================================== */
+
+.tenants-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tenants-header-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.tenants-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.tenants-header-actions .tenants-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .tenants-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
